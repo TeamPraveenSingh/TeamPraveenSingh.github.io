@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen Singh - Political Figure</title>
+    <link rel="stylesheet" href="styles.css">
+<style>/* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #ff6f00; /* BJP saffron color */
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .logo img {
+            width: 80px;
+        }
+        
+        .brand {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 10px;
+            display: inline-block;
+        }
+        
+        nav ul {
+            list-style: none;
+            text-align: right;
+            float: right;
+        }
+        
+        nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #074aa2; /* BJP blue color */
+        }
+        
+        .menu-toggle {
+            display: none;
+        }
+        
+        /* Introductory Section Styles */
+        .intro {
+            background-image: url('https://placehold.jp/1920x1080.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+        
+        .intro-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .intro-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .learn-more-btn {
+            background-color: #074aa2;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .learn-more-btn:hover {
+            background-color: #ff6f00;
+        }
+        
+        /* Biography Section Styles */
+        .biography {
+            padding: 50px 0;
+        }
+        
+        .biography h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #074aa2;
+        }
+        
+        .bio-details {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .bio-item {
+            width: 48%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .bio-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ff6f00;
+        }
+        
+        .bio-item p {
+            font-size: 16px;
+        }
+        
+        /* Election Info Section Styles */
+        .election-info {
+            padding: 50px 0;
+        }
+        
+        .election-info h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #074aa2;
+        }
+        
+        .election-timeline {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .election-item {
+            text-align: center;
+        }
+        
+        .election-year {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #ff6f00;
+        }
+        
+        .election-event {
+            font-size: 18px;
+        }
+        
+        /* Gallery Section Styles */
+        .gallery {
+            padding: 50px 0;
+        }
+        
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #074aa2;
+        }
+        
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+        
+        .image-item {
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Contact Me Form Styles */
+        .contact {
+            padding: 50px 0;
+            background-color: #fff;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #074aa2;
+        }
+        
+        form {
+            width: 50%;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #ff6f00;
+        }
+        
+        button[type="submit"] {
+            background-color: #074aa2;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #ff6f00;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #074aa2;
+            color: #fff;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .social-media .social-icon {
+            margin-right: 10px;
+        }
+        
+        .social-media .social-icon img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-media .social-icon img:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 1500;
+            }
+        
+            .menu-toggle span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: #fff;
+                margin: 5px auto;
+                transition: all 0.3s ease;
+            }
+        
+            .menu-toggle input {
+                display: none;
+            }
+        
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background-color: #ff6f00;
+                width: 150px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+        
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+            }
+        
+            nav ul li a {
+                display: block;
+                padding: 10px;
+                color: #fff;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
+        
+            nav ul li a:hover {
+                background-color: #074aa2;
+            }
+        
+            .show {
+                display: block;
+            }
+        }
+        </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/31/BJP_Logo.svg" alt="BJP Logo">
+            </div>
+            <div class="brand">Praveen Singh</div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Home</a></li>
+                    <li><a href="#biography">Biography</a></li>
+                    <li><a href="#election-info">Election Info</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introductory Section -->
+    <section id="intro" class="intro">
+        <div class="intro-content">
+            <h1>Praveen Singh</h1>
+            <p>Praveen Singh is a prominent political figure known for his dedicated service to the community. With a
+                background in social work and grassroots activism, Praveen has been actively involved in various
+                initiatives aimed at improving the lives of citizens. His commitment to public service and his vision
+                for a better future have earned him widespread recognition and support.</p>
+            <a href="#biography" class="learn-more-btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section id="biography" class="biography">
+        <div class="container">
+            <h2>Biography</h2>
+            <div class="bio-details">
+                <div class="bio-item">
+                    <h3>Early Life</h3>
+                    <p>Praveen Singh was born on October 1, 1975, in Sitapur, Uttar Pradesh. He grew up in a humble
+                        household, where he learned the values of hard work, integrity, and compassion from his
+                        parents.</p>
+                </div>
+                <div class="bio-item">
+                    <h3>Education</h3>
+                    <p>Praveen attended Lucknow University where he pursued his education. His academic excellence and
+                        leadership skills set the foundation for his future endeavors in public service.</p>
+                </div>
+                <div class="bio-item">
+                    <h3>Political Career</h3>
+                    <p>Praveen embarked on his political journey in 2009 when he joined the Samajwadi Party. In 2011, he
+                        was elected as the Block Pramukh of Machrehta in Sitapur. In March 2024, Praveen joined the
+                        Bharatiya Janata Party (BJP), furthering his commitment to nation-building.</p>
+                </div>
+                <div class="bio-item">
+                    <h3>Community Engagement</h3>
+                    <p>Aside from his political career, Praveen is actively involved in community service initiatives.
+                        He has spearheaded several campaigns aimed at addressing social issues such as education,
+                        healthcare, and environmental conservation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Election Info Section -->
+    <section id="election-info" class="election-info">
+        <div class="container">
+            <h2>Election Info</h2>
+            <div class="election-timeline">
+                <div class="election-item">
+                    <div class="election-year">2009</div>
+                    <div class="election-event">Joined Samajwadi Party</div>
+                </div>
+                <div class="election-item">
+                    <div class="election-year">2011</div>
+                    <div class="election-event">Became Block Pramukh</div>
+                </div>
+                <div class="election-item">
+                    <div class="election-year">2024</div>
+                    <div class="election-event">Joined BJP</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="image-grid">
+                <div class="image-item"><img src="https://placehold.jp/300x200.png" alt="Image 1"></div>
+                <div class="image-item"><img src="https://placehold.jp/400x300.png" alt="Image 2"></div>
+                <div class="image-item"><img src="https://placehold.jp/500x400.png" alt="Image 3"></div>
+                <div class="image-item"><img src="https://placehold.jp/600x500.png" alt="Image 4"></div>
+                <div class="image-item"><img src="https://placehold.jp/300x200.png" alt="Image 5"></div>
+                <div class="image-item"><img src="https://placehold.jp/400x300.png" alt="Image 6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Form -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="copyright">&copy; 2024 Praveen Singh</div>
+            <div class="social-media">
+                <a href="#" class="social-icon"><img src="https://placehold.jp/30x30.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="https://placehold.jp/30x30.png" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="https://placehold.jp/30x30.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js">
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Show/Hide Mobile Menu
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('show');
+});
+
+// Sticky Header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    const intro = document.querySelector('.intro');
+
+    if (window.scrollY > intro.offsetHeight) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
+});
+</script>
+</body>
+
+</html>
