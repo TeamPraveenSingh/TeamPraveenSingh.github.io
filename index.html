@@ -2,542 +2,391 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praveen Singh - Political Figure</title>
-    <link rel="stylesheet" href="styles.css">
-<style>/* Reset Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        /* Global Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: #ff6f00; /* BJP saffron color */
-            padding: 20px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        
-        .logo img {
-            width: 80px;
-        }
-        
-        .brand {
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-            margin-left: 10px;
-            display: inline-block;
-        }
-        
-        nav ul {
-            list-style: none;
-            text-align: right;
-            float: right;
-        }
-        
-        nav ul li {
-            display: inline-block;
-            margin-left: 20px;
-        }
-        
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: #074aa2; /* BJP blue color */
-        }
-        
-        .menu-toggle {
-            display: none;
-        }
-        
-        /* Introductory Section Styles */
-        .intro {
-            background-image: url('https://placehold.jp/1920x1080.png');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
-        }
-        
-        .intro-content h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .intro-content p {
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-        
-        .learn-more-btn {
-            background-color: #074aa2;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 18px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        
-        .learn-more-btn:hover {
-            background-color: #ff6f00;
-        }
-        
-        /* Biography Section Styles */
-        .biography {
-            padding: 50px 0;
-        }
-        
-        .biography h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #074aa2;
-        }
-        
-        .bio-details {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .bio-item {
-            width: 48%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .bio-item h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #ff6f00;
-        }
-        
-        .bio-item p {
-            font-size: 16px;
-        }
-        
-        /* Election Info Section Styles */
-        .election-info {
-            padding: 50px 0;
-        }
-        
-        .election-info h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #074aa2;
-        }
-        
-        .election-timeline {
-            display: flex;
-            justify-content: space-around;
-        }
-        
-        .election-item {
-            text-align: center;
-        }
-        
-        .election-year {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #ff6f00;
-        }
-        
-        .election-event {
-            font-size: 18px;
-        }
-        
-        /* Gallery Section Styles */
-        .gallery {
-            padding: 50px 0;
-        }
-        
-        .gallery h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #074aa2;
-        }
-        
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 20px;
-        }
-        
-        .image-item {
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .image-item img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-        
-        .image-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        /* Contact Me Form Styles */
-        .contact {
-            padding: 50px 0;
-            background-color: #fff;
-        }
-        
-        .contact h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #074aa2;
-        }
-        
-        form {
-            width: 50%;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: border-color 0.3s ease;
-        }
-        
-        input[type="text"]:focus,
-        input[type="email"]:focus,
-        textarea:focus {
-            border-color: #ff6f00;
-        }
-        
-        button[type="submit"] {
-            background-color: #074aa2;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-        }
-        
-        button[type="submit"]:hover {
-            background-color: #ff6f00;
-        }
-        
-        /* Footer Styles */
-        footer {
-            background-color: #074aa2;
-            color: #fff;
-            padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        
-        .footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .social-media .social-icon {
-            margin-right: 10px;
-        }
-        
-        .social-media .social-icon img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-        
-        .social-media .social-icon img:hover {
-            transform: scale(1.1);
-        }
-        
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-        
-            .menu-toggle {
-                display: block;
-                cursor: pointer;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                z-index: 1500;
-            }
-        
-            .menu-toggle span {
-                display: block;
-                width: 25px;
-                height: 3px;
-                background-color: #fff;
-                margin: 5px auto;
-                transition: all 0.3s ease;
-            }
-        
-            .menu-toggle input {
-                display: none;
-            }
-        
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 70px;
-                right: 20px;
-                background-color: #ff6f00;
-                width: 150px;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            }
-        
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-                text-align: center;
-            }
-        
-            nav ul li a {
-                display: block;
-                padding: 10px;
-                color: #fff;
-                text-decoration: none;
-                transition: background-color 0.3s ease;
-            }
-        
-            nav ul li a:hover {
-                background-color: #074aa2;
-            }
-        
-            .show {
-                display: block;
-            }
-        }
-        </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Praveen Singh - BJP </title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animate.min.css" />
+    <link rel="icon" type="image/x-icon" href="/Assets/BJP_LOGO.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 </head>
 
 <body>
-
-    <!-- Header Section -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <img src="https://upload.wikimedia.org/wikipedia/en/3/31/BJP_Logo.svg" alt="BJP Logo">
+        <div class="details">
+            <div class="mail-phone">
+                <a href="mailto:teampraveensingh@gmail.com" class="text-decoration-none">teampraveensingh@gmail.com
+                    &nbsp;&nbsp;&nbsp;</a>
+                <span style="border-right:1px solid #ffffff;">+91 9616169000 &nbsp;</span>
             </div>
-            <div class="brand">Praveen Singh</div>
-            <nav>
-                <ul>
-                    <li><a href="#intro">Home</a></li>
-                    <li><a href="#biography">Biography</a></li>
-                    <li><a href="#election-info">Election Info</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="menu-toggle">
-                <input type="checkbox">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="social">
+                <a href="https://www.facebook.com/teampraveensingh/?fref=ts" target="_blank"
+                    class="fa-brands fa-facebook-f text-decoration-none"></a>
+                <a href="https://twitter.com/teampraveenbjp" target="_blank"
+                    class="fa-brands fa-twitter text-decoration-none"></a>
+                <a href="https://instagram.com/teampraveenbjp" target="_blank"
+                    class="fa-brands fa-instagram text-decoration-none"></a>
             </div>
         </div>
     </header>
-
-    <!-- Introductory Section -->
-    <section id="intro" class="intro">
-        <div class="intro-content">
-            <h1>Praveen Singh</h1>
-            <p>Praveen Singh is a prominent political figure known for his dedicated service to the community. With a
-                background in social work and grassroots activism, Praveen has been actively involved in various
-                initiatives aimed at improving the lives of citizens. His commitment to public service and his vision
-                for a better future have earned him widespread recognition and support.</p>
-            <a href="#biography" class="learn-more-btn">Learn More</a>
+    <nav>
+        <div class="brand-outer">
+            <a href="#" class="brand text-decoration-none">
+                <img src="/Assets/BJP_LOGO.png" alt="" />
+                <div class="brand-name">
+                    <h1>Praveen Kumar Singh</h1>
+                    <p> Ex Block Pramukh, Machrehta Sitapur </p>
+                </div>
+            </a>
+            <div class="menu-outer my-2">
+                <div class="menu-btn"></div>
+            </div>
         </div>
-    </section>
+        <ul class="m-0 p-0 nav-links">
 
-    <!-- Biography Section -->
-    <section id="biography" class="biography">
-        <div class="container">
-            <h2>Biography</h2>
-            <div class="bio-details">
-                <div class="bio-item">
-                    <h3>Early Life</h3>
-                    <p>Praveen Singh was born on October 1, 1975, in Sitapur, Uttar Pradesh. He grew up in a humble
-                        household, where he learned the values of hard work, integrity, and compassion from his
-                        parents.</p>
+
+            <li>
+                <a href="#" class="text-decoration-none"> Home </a>
+            </li>
+            <li class="dropdown-toggle2">
+                <a class="text-decoration-none">
+                    Media
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="p-0 dropdown-menu2">
+                    <li>
+                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-chevron-right"></i>Photos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-chevron-right"></i>Videos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-decoration-none"><i class="fa-solid fa-chevron-right"></i>News</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="text-decoration-none">
+                    Events
+                </a>
+            </li>
+            <li>
+                <a href="#" class="text-decoration-none"> Gallery </a>
+            </li>
+            <li>
+                <a href="#" class="text-decoration-none">
+                    Contact us
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <section class="about">
+        <div class="about-wrapper">
+            <div class="items">
+                <div class="image" data-aos="flip-left">
+                    <img src="/Assets/BANNER.jpeg" alt="" />
                 </div>
-                <div class="bio-item">
-                    <h3>Education</h3>
-                    <p>Praveen attended Lucknow University where he pursued his education. His academic excellence and
-                        leadership skills set the foundation for his future endeavors in public service.</p>
-                </div>
-                <div class="bio-item">
-                    <h3>Political Career</h3>
-                    <p>Praveen embarked on his political journey in 2009 when he joined the Samajwadi Party. In 2011, he
-                        was elected as the Block Pramukh of Machrehta in Sitapur. In March 2024, Praveen joined the
-                        Bharatiya Janata Party (BJP), furthering his commitment to nation-building.</p>
-                </div>
-                <div class="bio-item">
-                    <h3>Community Engagement</h3>
-                    <p>Aside from his political career, Praveen is actively involved in community service initiatives.
-                        He has spearheaded several campaigns aimed at addressing social issues such as education,
-                        healthcare, and environmental conservation.</p>
+                <div class="paragraph" data-aos="flip-right">
+                    <div class="lead">
+                        <h2>About</h2>
+                        <h1>Praveen Kumar Singh</h1>
+
+                    </div>
+
+                    <p>
+                        Praveen Kumar Singh, an esteemed figure in his community, served as the Block Pramukh of
+                        Macharehta, Sitapur, from 2011 to 2016. During his tenure, he forged strong bonds with the
+                        public, earning their trust and respect through his dedicated service and unwavering commitment
+                        to their welfare. Recognizing the need for broader avenues to enact change and bring progress to
+                        his region, Praveen made the conscientious decision to join the Bharatiya Janata Party (BJP).
+                        Inspired by the BJP's transformative policies and impactful governance, Praveen saw an
+                        opportunity to further amplify his efforts in serving society and driving positive development.
+                        His transition to the BJP reflects his earnest desire to leverage the party's vision and
+                        resources for the betterment of his community and beyond
+                    </p>
+
+
+
+                    <a href="#" class="text-decoration-none">Read More</a>
                 </div>
             </div>
         </div>
     </section>
+    <main>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/Assets/BANNER.jpeg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/Assets/GRID_1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/Assets/GRID_2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/Assets/GRID_3.jpeg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="/Assets/GRID_4.jpeg" alt="" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
 
-    <!-- Election Info Section -->
-    <section id="election-info" class="election-info">
-        <div class="container">
-            <h2>Election Info</h2>
-            <div class="election-timeline">
-                <div class="election-item">
-                    <div class="election-year">2009</div>
-                    <div class="election-event">Joined Samajwadi Party</div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </main>
+    <section class="gallery">
+        <div class="gallery-wrapper">
+
+            <div class="paragraph">
+                <h2>Photo Gallery</h2>
+                <h1>Photos Of Praveen Singh</h1>
+
+            </div>
+            <div class="images">
+                <a data-fslightbox href="Assets/GRID_1.jpg" data-aos="fade-up" class="img1"><img src="Assets/GRID_1.jpg"
+                        alt="" /></a>
+                <a data-fslightbox href="Assets/GRID_2.jpg" data-aos="fade-up" class="img2"><img src="Assets/GRID_2.jpg"
+                        alt="" /></a>
+                <a data-fslightbox href="Assets/GRID_3.jpeg" data-aos="fade-up" class="img3"><img
+                        src="Assets/GRID_3.jpeg" alt="" /></a>
+                <a data-fslightbox href="Assets/GRID_4.jpeg" data-aos="fade-up" class="img4"><img
+                        src="Assets/GRID_4.jpeg" alt="" /></a>
+            </div>
+
+            <a data-aos="zoom-in" href="https://facebook.com/teampraveensingh" class="see-more text-decoration-none">
+                View More
+            </a>
+
+        </div>
+    </section>
+    <section class="latest">
+        <div class="latest-wrapper">
+            <h2>Join <strong>Whatsapp</strong> Group</h2>
+            <p>Official WhatsApp group of Praveen Singh. Stay connected for updates and announcements.</p>
+
+            <a href="https://chat.whatsapp.com/DaLx60hrnaKJHomBoFE2gq" class="explore-btn">WHATSAPP <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+    <section class="connect">
+        <div class="connect-wrapper">
+            <div class="title">
+                <div class="text">
+                    <h2>Connect</h2>
+                    <h1>Social Connect</h1>
                 </div>
-                <div class="election-item">
-                    <div class="election-year">2011</div>
-                    <div class="election-event">Became Block Pramukh</div>
+            </div>
+            <div class="items">
+                <div class="item text-decoration-none item2">
+                    <div class="name">
+                        <h1>Recent Tweets</h1>
+                    </div>
+                    <a class="twitter-timeline" data-width="380" data-height="500"
+                        href="https://twitter.com/teampraveenbjp">Twitter</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
-                <div class="election-item">
-                    <div class="election-year">2024</div>
-                    <div class="election-event">Joined BJP</div>
+                <a class="item text-decoration-none item4">
+                    <div class="name">
+                        <h1>News Events</h1>
+                        <marquee direction="up" onmouseover="stop()" height="450px" width="300px" onmouseout="start()">
+
+                            <div class="news">
+                                <p class="m-0">
+                                    <i class="fa-solid fa-calendar-days"></i><strong> 9 May 2024:</strong>
+                                </p>
+                                <div class="m-0 news-content">
+                                    <p>माननीय मोदी जी के नेतृत्व मे दुनियाभर मे बज रहा भारत का डंका मिश्रिख लोकसभा
+                                        क्षेत्र मे भाजपा प्रत्याशी मा. अशोक रावत जी के लिए जनसंपर्क कर भाजपा को भारी
+                                        बहुमत से जिताने की अपील की। 🚩🙏🏻 </p>
+                                </div>
+                                <hr />
+                            </div>
+                            <div class="news">
+                                <p class="m-0">
+                                    <i class="fa-solid fa-calendar-days"></i><strong> 9 May 2024:</strong>
+                                </p>
+                                <div class="m-0 news-content">
+                                    <p>आज मिश्रिख लोकसभा क्षेत्र की विधानसभा मिश्रिख में सिधौली से विधायक मा. मनीष रावत
+                                        जी के साथ भाजपा प्रत्याशी मा. अशोक रावत जी के पक्ष में वोट देने की अपील की।
+                                        🚩🙏🏻 </p>
+                                </div>
+                                <hr />
+                            </div>
+                            <div class="news">
+                                <p class="m-0">
+                                    <i class="fa-solid fa-calendar-days"></i><strong> 7 May 2024:</strong>
+                                </p>
+                                <div class="m-0 news-content">
+                                    <p>मिश्रिख लोकसभा क्षेत्र के नैमिषारण्य और मिश्रिख की पावन धरा पर
+                                        आज प्रदेश के यशस्वी मुख्य मंत्री मा.योगी आदित्यनाथ जी का आगमन हुआ। मा.मुख्य
+                                        मंत्री जी का
+                                        उद्बोधन लोगो मे राष्ट्र प्रेम का संचार करता है मुख्य मंत्री जी ने भाजपा
+                                        प्रत्याशी मा. अशोक
+                                        रावत जी के पक्ष मे वोट करने की अपील की। 🚩🙏🏻 </p>
+                                </div>
+                                <hr />
+                            </div>
+                            <div class="news">
+                                <p class="m-0">
+                                    <i class="fa-solid fa-calendar-days"></i><strong> 6 May 2024:</strong>
+                                </p>
+                                <div class="m-0 news-content">
+                                    <p>मिश्रिख लोकसभा क्षेत्र के अंतर्गत विधानसभा मिश्रिख में
+                                        मा.सासंद/प्रत्याशी श्री अशोक रावत जी के समर्थन में जनसंपर्क कर भाजपा के पक्ष में
+                                        वोट मांगा।
+                                        🚩🙏🏻 </p>
+                                </div>
+                                <hr />
+                            </div>
+                            <div class="news">
+                                <p class="m-0">
+                                    <i class="fa-solid fa-calendar-days"></i><strong> 5 May 2024:</strong>
+                                </p>
+                                <div class="m-0 news-content">
+                                    <p>मिश्रिख लोकसभा क्षेत्र के अंतर्गत विधानसभा मिश्रिख के विभिन्न
+                                        ग्रामपंचायतो में मा.सासंद/प्रत्याशी श्री अशोक रावत जी के समर्थन में पूर्व विधान
+                                        परिषद सदस्य
+                                        श्री राकेश सिंह जी के साथ में जनसंपर्क किया। भाजपा के प्रति लोगों के मन मे
+                                        उत्साह और विश्वास
+                                        है यही हमारी सबसे बड़ी उपलब्धि है। 🚩🙏🏻 </p>
+                                </div>
+                                <hr />
+                            </div>
+                            <div class="news">
+                                <p class="m-0">
+                                    <i class="fa-solid fa-calendar-days"></i><strong> 4 May 2024:</strong>
+                                </p>
+                                <div class="m-0 news-content">
+                                    <p>मिश्रिख लोकसभा क्षेत्र के ब्लॉक मछरेहटा में विभिन्न गांवों में
+                                        घर-घर जाकर देशहित के लिए भाजपा के पक्ष में वोट देने की अपील की! 🚩🙏🏻 </p>
+                                </div>
+                                <hr />
+                            </div>
+
+                        </marquee>
+                    </div>
+                </a>
+
+                <div class="item text-decoration-none item3">
+                    <div class="name">
+                        <h1>Facebook Posts</h1>
+                    </div>
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fteampraveensingh%2F&tabs=timeline&width=380&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="380" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                 </div>
+
+
+
             </div>
         </div>
     </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2>Gallery</h2>
-            <div class="image-grid">
-                <div class="image-item"><img src="https://placehold.jp/300x200.png" alt="Image 1"></div>
-                <div class="image-item"><img src="https://placehold.jp/400x300.png" alt="Image 2"></div>
-                <div class="image-item"><img src="https://placehold.jp/500x400.png" alt="Image 3"></div>
-                <div class="image-item"><img src="https://placehold.jp/600x500.png" alt="Image 4"></div>
-                <div class="image-item"><img src="https://placehold.jp/300x200.png" alt="Image 5"></div>
-                <div class="image-item"><img src="https://placehold.jp/400x300.png" alt="Image 6"></div>
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="items">
+                <div class="footer-contact">
+                    <h5 class="mb-5 text-white footer-h5">Contact Us</h5>
+                    <div class="footer-contact-wrapper">
+                        <address class="mb-0 text-white">
+                            <i class="fa-solid fa-location-dot"></i> Praveen's Farmhouse, Anogi, Uttar Pradesh [261403]
+                        </address>
+                        <span class="mb-0 text-white"><i class="fa-solid fa-envelope"></i>
+                            teampraveensingh@gmail.com</span>
+                        <span class="mb-0 text-white"><i class="fa-solid fa-phone"></i> +91 9616169000</span>
+                        <div class="social">
+                            <a href="https://www.facebook.com/teampraveensingh/?fref=ts" target="_blank"
+                                class="fa-brands fa-facebook-f text-decoration-none"></a>
+                            <a href="https://twitter.com/teampraveenbjp" target="_blank"
+                                class="fa-brands fa-twitter text-decoration-none"></a>
+                            <a href="https://instagram.com/teampraveensingh" target="_blank"
+                                class="fa-brands fa-instagram text-decoration-none"></a>
+                            <a href="https://chat.whatsapp.com/DaLx60hrnaKJHomBoFE2gq" target="_blank"
+                                class="fa-brands fa-whatsapp text-decoration-none"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-subscribe">
+                    <h5 class="mb-5 text-white footer-h5">Subscribe to Newsletter</h5>
+                    <p>Subscribe newsletter to get updates..</p>
+                    <div class="footer-subscribe-wrapper">
+                        <input type="email" name="email" />
+                        <a class="fa-sharp fa-solid fa-paper-plane"></a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Me Form -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                </div>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="copyright">&copy; 2024 Praveen Singh</div>
-            <div class="social-media">
-                <a href="#" class="social-icon"><img src="https://placehold.jp/30x30.png" alt="Facebook"></a>
-                <a href="#" class="social-icon"><img src="https://placehold.jp/30x30.png" alt="Twitter"></a>
-                <a href="#" class="social-icon"><img src="https://placehold.jp/30x30.png" alt="Instagram"></a>
+            <div class="copyright">
+                <p class="m-0">
+                    Copyright 2024 © Made by<a href="" class="text-decoration-none">
+                        Kshitij Vats</a>
+                </p>
             </div>
         </div>
     </footer>
 
-    <script src="scripts.js">
-// Smooth Scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.0.9/index.js"
+        integrity="sha512-2VqLVM3WCyaqUgQb2hpoWHSus021RIN0Jq0wfrLqqLh+anm1kW/H4Yw7HVu3D5W4nbdUQmAA2mqQv2JEoy+kPA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+        integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SWIPER SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script type="module">
+
+        import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
+        const swiper = new Swiper("main .swiper", {
+            loop: true,
+
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+
+            // pagination
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
-    });
-});
+    </script>
 
-// Show/Hide Mobile Menu
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav ul');
+    <script>
+        $(document).ready(function () {
+            $(".menu-outer").click(function () {
+                $(".nav-links").toggle(300);
+            });
+        });
+    </script>
 
-menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('show');
-});
-
-// Sticky Header
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const intro = document.querySelector('.intro');
-
-    if (window.scrollY > intro.offsetHeight) {
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
-    }
-});
-</script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
