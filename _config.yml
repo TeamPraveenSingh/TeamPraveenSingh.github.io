@@ -1,0 +1,45 @@
+# config.yml
+
+# Site Information
+title: "Praveen Singh - BJP" # The title of your site
+description: "Explore the official website of Praveen Singh, a political figure from BJP, dedicated to serving the people of Uttar Pradesh. Stay updated with his latest news, initiatives, and contributions to regional politics."
+url: "https://praveensinghofficial.github.io" # The base URL of your site
+baseurl: "" # Leave this empty if your site is served at the root of your domain
+
+author: "Team Praveen Singh"
+twitter_username: "PraveenSingh"
+github_username: "PraveenSinghOfficial"
+
+# SEO Settings
+# These tags will appear in the <head> for better search engine ranking
+keywords: "Praveen Singh, BJP, Uttar Pradesh, Machrehta, Machhrehta, BJP leader, Narendra Modi, Yogi Adityanath, Team Praveen Singh, Sitapur, Misrikh, Anogi, Block Pramukh Machhrehta, Praveen Singh Machhrehta"
+
+# Social Media Optimization (Open Graph and Twitter Cards)
+social_image: "/Assets/PROFILE.png" # The default image for social sharing (OG and Twitter)
+social:
+  og_type: "website"
+  og_title: "Praveen Singh - BJP"
+  og_description: "Official website of Praveen Singh, regional political leader from BJP. Discover his initiatives, news, and more."
+  og_image: "/Assets/PROFILE.png"
+  og_url: "https://praveensinghofficial.github.io/"
+
+  twitter_card: "summary_large_image"
+  twitter_title: "Praveen Singh - BJP"
+  twitter_description: "Explore Praveen Singh's official platform and his contributions to Uttar Pradesh's political landscape."
+  twitter_image: "/Assets/PROFILE.png"
+  twitter_url: "https://praveensinghofficial.github.io/"
+
+# Google Analytics ID
+google_analytics: "YOUR_GOOGLE_ANALYTICS_ID" # Add your Google Analytics ID for tracking
+
+# Sitemap Configuration
+# This helps search engines crawl your site
+plugins:
+  - jekyll-sitemap
+sitemap:
+  changefreq: "weekly"
+  priority: 1.0
+  filename: "sitemap.xml"
+  
+# Favicon
+favicon: "/Assets/BJP_LOGO.png"
